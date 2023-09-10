@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import Text from "../../components/text";
+import Text from "@components/text";
 import { useJadwalSholatApi } from "./pages.home.hooks";
-import useCurrentDate from "../../utils/useCurrentDate";
+import { useCurrentDate } from "@utils";
 
 export default () => {
   const description = ["Subuh", "Dzuhur", "Ashar", "Maghrib", "Isya"];
@@ -22,14 +22,16 @@ export default () => {
         </Link>
       </div>
       <div className="flex justify-center max-w-lg w-full">
-        {loading 
-          ? <p>Loading...</p>
-          : description.map((v, k) => (
-          <div key={v} className="m-6 mt-4">
-            <Text.Base textSize="text-2xl">{ data?.jadwal[k] }</Text.Base>
-            <Text.Description textSize="text-sm">{v}</Text.Description>
-          </div>
-        ))}
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          description.map((v, k) => (
+            <div key={v} className="m-6 mt-4">
+              <Text.Base textSize="text-2xl">{data?.jadwal[k]}</Text.Base>
+              <Text.Description textSize="text-sm">{v}</Text.Description>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );

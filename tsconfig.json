@@ -18,7 +18,13 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Aliases */
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@utils": ["./src/utils/index"]
+    }
   },
   "include": ["src", "./setupTest.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]

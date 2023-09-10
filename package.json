@@ -1,7 +1,7 @@
 {
   "name": "kapan-sholat",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,8 +10,8 @@
     "preview": "vite preview",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "sb": "storybook dev -p 6006",
+    "build-sb": "storybook build"
   },
   "dependencies": {
     "react": "^18.2.0",
