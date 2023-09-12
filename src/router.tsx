@@ -1,18 +1,12 @@
-import {
-    createBrowserRouter
-} from 'react-router-dom'
-import App from "./App.tsx"
-import Tentang from './pages/tentang.tsx'
+import { createBrowserRouter } from "react-router-dom";
+
+import Home from "./pages/home/pages.home.tsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <App />
+    path: "/",
+    element: <Home />,
   },
-  {
-    path: '/tentang',
-    element: <Tentang />
-  }
-])
+]);
 
 export default router;

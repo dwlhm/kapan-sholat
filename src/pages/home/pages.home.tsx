@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Text from "@components/text";
+import Text from "@components/text/index.ts";
 import { useJadwalSholatApi } from "./pages.home.hooks";
 import { useCurrentDate } from "@utils";
 
@@ -13,7 +13,7 @@ export default () => {
     >
       <Text.Title>Jadwal Sholat Hari Ini</Text.Title>
       <div className="mt-12 flex justify-between max-w-lg w-full px-5">
-        <Text.Base textSize="text-sm">Tasikmalaya, Indonesia</Text.Base>
+        <Text.Base fontSize="text-sm">Tasikmalaya, Indonesia</Text.Base>
         <Link
           to="/jadwal-bulanan"
           className="transition text-sm bg-gray-100 text-gray-700 hover:text-gray-100 hover:bg-gray-900 px-4 py-1 rounded"
@@ -27,8 +27,8 @@ export default () => {
         ) : (
           description.map((v, k) => (
             <div key={v} className="m-6 mt-4">
-              <Text.Base textSize="text-2xl">{data?.jadwal[k]}</Text.Base>
-              <Text.Description textSize="text-sm">{v}</Text.Description>
+              <Text.Base fontSize="text-2xl">{data?.jadwal[k]}</Text.Base>
+              <Text.Base fontSize="text-sm" textAlign="text-center">{v}</Text.Base>
             </div>
           ))
         )}
