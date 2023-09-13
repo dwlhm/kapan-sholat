@@ -2,7 +2,9 @@ import type { useCurrentDateResp } from "@utils";
 import { useEffect, useState } from "react";
 import { JadwalSholat, JadwalSholatApi } from "./pages.home.interface";
 
-export const useJadwalSholatApi = (currentDate: useCurrentDateResp) : [boolean, Error | null, JadwalSholat | null] => {
+export const useJadwalSholatApi = (
+  currentDate: useCurrentDateResp
+): [boolean, Error | null, JadwalSholat | null] => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
   const [data, setData] = useState<JadwalSholat | null>(null);
@@ -20,7 +22,7 @@ export const useJadwalSholatApi = (currentDate: useCurrentDateResp) : [boolean, 
             jadwal.data.jadwal.dzuhur,
             jadwal.data.jadwal.ashar,
             jadwal.data.jadwal.maghrib,
-            jadwal.data.jadwal.isya
+            jadwal.data.jadwal.isya,
           ],
         });
       })

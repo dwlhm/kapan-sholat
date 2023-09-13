@@ -5,7 +5,7 @@ import { useCurrentDate } from "@utils";
 
 export default () => {
   const description = ["Subuh", "Dzuhur", "Ashar", "Maghrib", "Isya"];
-  const [loading, error, data] = useJadwalSholatApi(useCurrentDate());
+  const [loading, _, data] = useJadwalSholatApi(useCurrentDate());
   return (
     <div
       data-testid="pages-home"
