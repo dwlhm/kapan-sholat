@@ -24,7 +24,7 @@ export default () => {
 
   return {
     day: date.getDate(),
-    month: date.getMonth(),
+    month: date.getMonth() + 1,
     year: date.getFullYear(),
     month_name: month_name[date.getMonth()]
   };
