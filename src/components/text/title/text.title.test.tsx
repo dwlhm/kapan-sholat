@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { getByText, render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import Text from "..";
 import { TitleSize } from "./text.title";
 

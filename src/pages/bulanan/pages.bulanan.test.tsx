@@ -18,9 +18,6 @@ describe("<Bulanan />", () => {
         render(<PagesBulanan />, {
             wrapper: BrowserRouter
         })
-
-        // get component
-        const component = screen.getByTestId("pages-bulanan")
         
         const currentDate = useCurrentDate()
 

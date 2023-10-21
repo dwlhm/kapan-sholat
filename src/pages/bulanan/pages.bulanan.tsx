@@ -1,6 +1,5 @@
 import Text from "@components/text"
 import useCurrentDate from "../../utils/useCurrentDate"
-import { useJadwalSholatBulananApi } from "./pages.bulanan.hooks"
 
 import backIcon from "../../assets/icons/back.svg"
 import { Link } from "react-router-dom"
@@ -9,7 +8,6 @@ import { useGetJadwalSholatByMonthQuery } from "../../services/jadwalSholat"
 export default () => {
 
     const date = useCurrentDate()
-    const [ loading, error1, data1 ] = useJadwalSholatBulananApi(date)
     const { isLoading, error, data } = useGetJadwalSholatByMonthQuery(useCurrentDate())
 
     return(
